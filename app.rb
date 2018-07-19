@@ -18,17 +18,12 @@ module FormsLab
 
       params[:pirate][:ships].each do |ship_details|
 
-      Ship.new(ship_details)
+        Ship.new(ship_details)
+      end
 
-
-    end
-#binding.pry
-    @pirate = Pirate.new(params[:pirate])
-
-#binding.pry
+      @pirate = Pirate.new(params[:pirate])
       @ships = Ship.all
-#binding.pry
-    erb :'pirates/show'
+      erb :'pirates/show'
     end
   end
 end
